@@ -13,7 +13,7 @@ const Login = () => {
 
     try {
       const res = await axios.post(
-        "https://web-chat-kwpf.onrender.com/login",
+        "http://localhost:5000/login",
         {
           emailId,
           password,
