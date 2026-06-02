@@ -16,20 +16,20 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://fastchating.netlify.app/"],
+    origin: ["http://localhost:5173", "https://fastchating.netlify.app"],
 
     credentials: true,
   }),
 );
 
 app.use("/", authrouter);
-app.use("/messages", messageRouter); // ✅ add this
+app.use("/messages", messageRouter);
 
 const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173", "https://fastchating.netlify.app/"],
+    origin: ["http://localhost:5173", "https://fastchating.netlify.app"],
     credentials: true,
   },
 });
