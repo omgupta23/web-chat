@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback, useRef } from "react";
 import axios from "axios";
 import { socket } from "../socket";
 
-const API = "http://localhost:5000";
+const API = "https://web-chat-kwpf.onrender.com";
 
 function Chat() {
   const [message, setMessage] = useState("");
@@ -182,7 +182,6 @@ function Chat() {
           flexDirection: "column",
         }}
       >
-        {/* Header */}{" "}
         <div
           style={{
             padding: "15px",
